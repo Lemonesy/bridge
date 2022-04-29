@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style/normalize.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="./style/style.css">
+  <title>Caligula Bridge`s</title>
+</head>
+<body>
+  <div class="content">
+    <div class="content-sidebar">
+      <button class="content-sidebar__button" type="button"></button>
+      <ul class="content-sidebar__list">
+        <li class="content-sidebar__icon"><a class="content-sidebar__fb content-sidebar__link" target="_blank" href="#"></a></li>
+        <li class="content-sidebar__icon"><a class="content-sidebar__inst content-sidebar__link target="_blank" href="#"></a></li>
+        <li class="content-sidebar__icon"><a class="content-sidebar__twit content-sidebar__link target="_blank" href="#"></a></li>
+
+      </ul>
+    </div>
+    <header class="content-header">
+      <a class="content-header__logo" href="#"></a>
+      <nav>
+        <ul class="content-header__list">
+          <li class="content-header__item"><a class="content-header__link active" href="#">Home</a></li>
+          <li class="content-header__item"><a class="content-header__link " href="#">Roadmap</a></li>
+          <li class="content-header__item"><a class="content-header__link " href="#">About us</a></li>
+          <li class="content-header__item"><a class="content-header__link wallet" href="#"></a></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="content-main">
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">Slide 1</div>
+          <div class="swiper-slide">Slide 2</div>
+          <div class="swiper-slide">Slide 3</div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </main>
+  </div>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      direction: "vertical",
+      slidesPerView: 1,
+      spaceBetween: 30,
+      mousewheel: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+        renderBullet: function (index, className) {
+          return '<p class="' + className + '">' + ('#0' + index + 1) + "</span>";
+        },
+      },
+    });
+  </script>
+
+</body>
+</html>
